@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: blanchedalmond;
+            font: normal 15pt Times;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p> Aqui vai o resultado</p>
+    <br>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <br>
+    <div id="msg">Clique em mim!</div>
+    <br>
+    <script>
+       window.document.write('Fixando o conteúdo da aula.<br>') // Esse comando escreve na tela
+       var p1 = document.getElementsByTagName('p')[0]; // aribui o 1º parágrafo a variável p1
+       window.document.write('No primeiro parágrafo está escrito assim: ' + p1.innerText); // escreve na tela o texto pedido concatenado com o texo da var p1
+        /*
+        p1.style.color = 'green'; // muda a cor do texto da var p1 pra verde
+        var corpo = window.document.body // define como a var corpo o body
+        corpo.style.background = 'grey'; // muda o background pra cinza
+         var d = window.document.getElementById('msg'); // define como a var d o id msg que está na div
+         d.style.background = 'green'; // muda a cor do fundo da var d
+         d.innerText = 'Estou aguardando'; // muda o texto dentro da var d
+        window.document.getElementById('msg').innerText = 'Olá' // comando completo resumido na linha anterior
+        */
+        var d = window.document.querySelector('div#msg'); // classe é representada por ponto (.) em vez de #
+        d.style.color = 'blue'
+
+</script>
+</body>
+</html>
